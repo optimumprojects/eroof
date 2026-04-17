@@ -74,7 +74,7 @@ export function HomePageClient() {
         <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center max-w-4xl mx-auto text-white space-y-8">
             <div className="space-y-4">
-              <h1 className="font-heading text-5xl md:text-7xl font-black leading-none tracking-tight">
+              <h1 className="font-heading text-3xl md:text-7xl font-black leading-none tracking-tight">
                 The Easy Way To <br />
                 <span className="text-secondary">Buy A Roof</span>
               </h1>
@@ -86,7 +86,7 @@ export function HomePageClient() {
               <Button asChild size="lg" variant="cta">
                 <Link href="/quote">
                   <Calculator className="size-5" />
-                  Get A Real Quote Online In Minutes!
+                  Get A Real Quote In Minutes!
                 </Link>
               </Button>
             </div>
@@ -120,7 +120,7 @@ export function HomePageClient() {
           <div className="text-center mt-12">
             <p className="font-paragraph text-sm font-semibold text-primary mb-3">Ready to get started?</p>
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="h-5 w-5" />Get A Real Quote Online In Minutes!</Link>
+              <Link href="/quote"><Calculator className="h-5 w-5" />Get A Real Quote In Minutes!</Link>
             </Button>
           </div>
         </div>
@@ -163,7 +163,7 @@ export function HomePageClient() {
           <div className="text-center mt-12">
             <p className="font-paragraph text-sm font-semibold text-primary mb-3">Click Below For Your Instant Quote</p>
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote Online In Minutes!</Link>
+              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
             </Button>
           </div>
         </div>
@@ -327,7 +327,7 @@ export function HomePageClient() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote Online In Minutes!</Link>
+              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
             </Button>
             <span className="font-paragraph text-white/80">or</span>
             <a href="tel:6478237663" className="flex items-center space-x-2 text-white hover:text-primary-foreground transition-colors">
