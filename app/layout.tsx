@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     siteName: 'eRoof.ca',
     images: ['https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png'],
   },
+  icons: {
+    icon: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+    shortcut: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+    apple: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -74,7 +74,7 @@ export function HomePageClient() {
         <div className="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
           <div className="text-center max-w-4xl mx-auto text-white space-y-8">
             <div className="space-y-4">
-              <h1 className="font-heading text-3xl md:text-7xl font-black leading-none tracking-tight">
+              <h1 className="font-heading text-4xl md:text-7xl font-black leading-tight tracking-tight">
                 The Easy Way To <br />
                 <span className="text-secondary">Buy A Roof</span>
               </h1>
