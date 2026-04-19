@@ -20,9 +20,9 @@ const services = [
 ]
 
 const staticProjects = [
-  { url: 'https://drive.google.com/uc?export=view&id=1UgS0pItw_94DHBY7VqVVqeCXHrTphwNe', title: 'Hamilton East Roof Replacement', location: 'Hamilton East', description: 'Full asphalt shingle replacement completed in one day.' },
-  { url: 'https://drive.google.com/uc?export=view&id=1ZQM-eCl78A8gDd4-N5sOZFR2_Lcf3w-f', title: 'Ancaster Premium Shingles', location: 'Ancaster', description: 'Premium shingle installation with full cleanup.' },
-  { url: 'https://drive.google.com/uc?export=view&id=132f0mqWuDW9GywF4iiweqGRZy7eaAVeL', title: 'Dundas Repair & Skylights', location: 'Dundas', description: 'Roof repair plus skylight installation.' },
+  { url: 'https://static.wixstatic.com/media/b690e6_a5780f7f975a4315a239e42b4545f307~mv2.jpg', title: 'Oakville Executive Home', location: 'Oakville', description: 'Full roof replacement on an executive home.' },
+  { url: 'https://static.wixstatic.com/media/b690e6_2b48f7e8e063463ea36fe750117fd56f~mv2.jpg', title: 'Carlisle Custom Home', location: 'Carlisle', description: 'Custom home roofing installation.' },
+  { url: 'https://static.wixstatic.com/media/b690e6_00d7cf02d6434126983adf90c7295bbb~mv2.jpg', title: 'Georgetown Custom Home', location: 'Georgetown', description: 'Custom home roof replacement.' },
 ]
 
 const valueProps = [

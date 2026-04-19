@@ -86,9 +86,11 @@ export function QuotePageClient() {
               </div>
               {[
                 { title: '1. Who We Are', body: 'This Privacy Policy explains how eRoof.ca ("eRoof," "we," "us," "our") collects, uses, and protects your personal information when you visit eroof.ca, use our online estimator, request an inspection, or communicate with us. By using our website or services, you agree to this Privacy Policy.' },
+                { title: '2. Information We Collect', body: 'We collect information you provide directly, such as your name, email address, phone number, home address, and project details when you request a quote or schedule an inspection. We also collect usage data automatically, including IP address, browser type, and pages visited, to improve our website and services.' },
+                { title: '3. How We Use Your Information', body: 'We use your personal information to provide and improve our services, including generating roof estimates, scheduling inspections, communicating about your project, and sending relevant updates. We may also use your information for internal analytics to improve our website experience.' },
                 { title: '4. SMS Communications', body: 'By providing your phone number and opting in, you consent to receive SMS messages from eRoof about your estimate, inspection, scheduling, or project. Reply STOP to opt out at any time. Message and data rates may apply. We do not sell your phone number or share mobile information with third parties for marketing.' },
                 { title: '5. Sharing and Disclosure', body: 'We may share your information with trusted service providers only as needed to operate our business. We do not sell or rent your personal information to third parties.' },
-                { title: '13. Contact Us', body: '' },
+                { title: '6. Contact Us', body: '' },
               ].map((s, i) => (
                 <div key={i}>
                   <h3 className="font-heading text-lg font-bold text-white mb-2">{s.title}</h3>
