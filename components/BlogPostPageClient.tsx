@@ -6,8 +6,45 @@ import { useRouter } from 'next/navigation'
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
-import { marked } from 'marked'
 import type { BlogPost } from '@/lib/types'
+
+/** Lightweight Markdown → HTML (covers headings, bold, italic, lists, paragraphs, links) */
+function renderMarkdown(md: string): string {
+  let html = md
+    // headings (## … ######)
+    .replace(/^######\s+(.+)$/gm, '<h6>$1</h6>')
+    .replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>')
+    .replace(/^####\s+(.+)$/gm, '<h4>$1</h4>')
+    .replace(/^###\s+(.+)$/gm, '<h3>$1</h3>')
+    .replace(/^##\s+(.+)$/gm, '<h2>$1</h2>')
+    .replace(/^#\s+(.+)$/gm, '<h1>$1</h1>')
+    // bold + italic
+    .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // links
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+
+  // unordered lists: consecutive lines starting with "- "
+  html = html.replace(/(^- .+$(\n|$))+/gm, (block) => {
+    const items = block.trim().split('\n').map(l => `<li>${l.replace(/^- /, '')}</li>`).join('')
+    return `<ul>${items}</ul>\n`
+  })
+
+  // ordered lists: consecutive lines starting with "1. ", "2. ", etc.
+  html = html.replace(/(^\d+\. .+$(\n|$))+/gm, (block) => {
+    const items = block.trim().split('\n').map(l => `<li>${l.replace(/^\d+\.\s/, '')}</li>`).join('')
+    return `<ol>${items}</ol>\n`
+  })
+
+  // paragraphs: wrap remaining bare text blocks
+  html = html.replace(/^(?!<[a-z])((?!<[a-z]).+)$/gm, '<p>$1</p>')
+
+  // clean up empty paragraphs
+  html = html.replace(/<p>\s*<\/p>/g, '')
+
+  return html
+}
 
 const FALLBACK_POSTS: BlogPost[] = [
   {
@@ -560,7 +597,10 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
       {/* ── Content ── */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div dangerouslySetInnerHTML={{ __html: marked(post.content || '') }} className="prose prose-lg max-w-none" />
+          <div
+            dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content || '') }}
+            className="max-w-none text-gray-700 text-lg leading-relaxed [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:text-primary [&_h1]:mt-10 [&_h1]:mb-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-primary [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-primary [&_h3]:mt-8 [&_h3]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_ul_li]:mb-2 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-4 [&_ol_li]:mb-2 [&_strong]:font-semibold [&_strong]:text-gray-900 [&_a]:text-secondary [&_a]:underline"
+          />
         </div>
       </section>
 
