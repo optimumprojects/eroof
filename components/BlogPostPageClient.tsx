@@ -563,7 +563,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
       {/* ── Content ── */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div dangerouslySetInnerHTML={{ __html: renderedContent }} className="prose prose-lg max-w-none" />
+          <div dangerouslySetInnerHTML={{ __html: renderedContent }} className="space-y-6 text-gray-700 leading-relaxed [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-black [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:mb-1" />
         </div>
       </section>
 

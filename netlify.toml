@@ -3,7 +3,7 @@
   publish = ".next"
 
 [functions]
-  external_node_modules = ["marked", "@tailwindcss/typography", "sharp"]
+  external_node_modules = ["marked", "sharp"]
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
