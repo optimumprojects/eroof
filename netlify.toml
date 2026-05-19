@@ -3,7 +3,7 @@
   publish = ".next"
 
 [functions]
-  external_node_modules = ["marked", "sharp"]
+  external_node_modules = ["sharp"]
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

@@ -8,6 +8,17 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
 import type { BlogPost } from '@/lib/types'
 
+function renderMarkdown(text: string): string {
+  return text
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[\s\S]*?<\/li>)/gm, '<ul>$1</ul>')
+    .replace(/^(?!<[hl]|<ul|<li)(.+)$/gm, '<p>$1</p>')
+    .replace(/\n{2,}/g, '')
+}
+
 const FALLBACK_POSTS: BlogPost[] = [
   {
     _id: '1',
@@ -480,16 +491,12 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [related, setRelated] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
-  const [renderedContent, setRenderedContent] = useState<string>('')
 
   useEffect(() => {
     const found = FALLBACK_POSTS.find(p => p.slug === slug)
     if (found) {
       setPost(found)
       setRelated(FALLBACK_POSTS.filter(p => p._id !== found._id).slice(0, 3))
-      import('marked').then(({ marked }) => {
-        setRenderedContent(marked(found.content || '') as string)
-      })
     } else {
       router.replace('/blog')
     }
@@ -563,7 +570,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
       {/* ── Content ── */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div dangerouslySetInnerHTML={{ __html: renderedContent }} className="space-y-6 text-gray-700 leading-relaxed [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-black [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:mb-1" />
+          <div dangerouslySetInnerHTML={{ __html: renderMarkdown(post.content || '') }} className="space-y-6 text-gray-700 leading-relaxed [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-black [&_h2]:mt-8 [&_h2]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:mb-1" />
         </div>
       </section>
 
