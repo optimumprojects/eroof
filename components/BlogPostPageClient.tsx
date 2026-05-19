@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation'
 import { Calendar, Clock, ArrowLeft, ArrowRight, Share2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
-import { marked } from 'marked'
 import type { BlogPost } from '@/lib/types'
 
 const FALLBACK_POSTS: BlogPost[] = [
@@ -481,12 +480,16 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [related, setRelated] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
+  const [renderedContent, setRenderedContent] = useState<string>('')
 
   useEffect(() => {
     const found = FALLBACK_POSTS.find(p => p.slug === slug)
     if (found) {
       setPost(found)
       setRelated(FALLBACK_POSTS.filter(p => p._id !== found._id).slice(0, 3))
+      import('marked').then(({ marked }) => {
+        setRenderedContent(marked(found.content || '') as string)
+      })
     } else {
       router.replace('/blog')
     }
@@ -560,7 +563,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
       {/* ── Content ── */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div dangerouslySetInnerHTML={{ __html: marked(post.content || '') }} className="prose prose-lg max-w-none" />
+          <div dangerouslySetInnerHTML={{ __html: renderedContent }} className="prose prose-lg max-w-none" />
         </div>
       </section>
 
