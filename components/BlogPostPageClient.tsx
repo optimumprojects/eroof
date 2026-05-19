@@ -495,6 +495,8 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
 
   const handleShare = () => {
     if (typeof navigator !== 'undefined') {
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({ event: 'share_blog', blog_title: post?.title })
       if (navigator.share) {
         navigator.share({ title: post?.title, text: post?.shortDescription, url: window.location.href })
       } else {
@@ -608,7 +610,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto">Get expert advice and a free quote from Hamilton&apos;s trusted roofing professionals.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote">Get A Real Quote In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>Get A Real Quote In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
               <Link href="/services">View Our Services</Link>

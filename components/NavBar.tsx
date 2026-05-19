@@ -35,19 +35,19 @@ export function NavBar() {
 
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
+              <Link key={item.name} href={item.href} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
                 {item.name}
               </Link>
             ))}
           </nav>
 
           <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:6478237663" className="flex items-center space-x-2 text-secondary hover:text-white transition-colors">
+            <a href="tel:6478237663" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_phone', clicked_phone: '(647) 82-EROOF', site_section: 'header' }); }} className="flex items-center space-x-2 text-secondary hover:text-white transition-colors">
               <Phone className="h-4 w-4" />
               <span className="font-paragraph font-semibold">(647) 82-EROOF</span>
             </a>
             <Button asChild variant="cta" size="default">
-              <Link href="/quote">
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); }}>
                 <Calculator className="size-4" />
                 Get Instant Quote
               </Link>
@@ -63,12 +63,12 @@ export function NavBar() {
           <div className="lg:hidden py-4 border-t border-white/20">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => setIsMenuOpen(false)} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
+                <Link key={item.name} href={item.href} onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
                   {item.name}
                 </Link>
               ))}
               <div className="pt-4 border-t border-white/20 space-y-4">
-                <a href="tel:6478237663" className="flex items-center space-x-2 text-secondary hover:text-white transition-colors">
+                <a href="tel:6478237663" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_phone', clicked_phone: '(647) 82-EROOF', site_section: 'header' }); }} className="flex items-center space-x-2 text-secondary hover:text-white transition-colors">
                   <Phone className="h-4 w-4" />
                   <span className="font-paragraph font-semibold">(647) 82-EROOF</span>
                 </a>
@@ -77,7 +77,7 @@ export function NavBar() {
                   <span className="font-paragraph font-semibold">info@eroof.ca</span>
                 </a>
                 <Button asChild variant="cta" className="w-full">
-                  <Link href="/quote" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/quote" onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); }}>
                     <Calculator className="size-4" />
                     Get Instant Quote
                   </Link>

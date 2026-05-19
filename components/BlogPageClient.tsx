@@ -70,7 +70,7 @@ export function BlogPageClient() {
                         <h3 className="font-heading text-2xl md:text-3xl font-black text-black mb-4">{featured.title}</h3>
                         <p className="font-paragraph text-gray-600 mb-6 leading-relaxed">{featured.shortDescription}</p>
                         <Button asChild variant="default" className="w-fit bg-black text-white hover:bg-black/80">
-                          <Link href={`/blog/${featured.slug}`}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
+                          <Link href={`/blog/${featured.slug}`} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'select_blog', blog_title: featured.title, clicked_blog_section: 'Featured Articles' }); }}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
                         </Button>
                       </div>
                     </div>
@@ -94,7 +94,7 @@ export function BlogPageClient() {
                           <h3 className="font-heading text-lg font-black text-black line-clamp-2">{post.title}</h3>
                           <p className="font-paragraph text-gray-600 text-sm line-clamp-3">{post.shortDescription}</p>
                           <Button asChild variant="outline" size="sm" className="w-full border-black text-black hover:bg-black hover:text-white">
-                            <Link href={`/blog/${post.slug}`}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
+                            <Link href={`/blog/${post.slug}`} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'select_blog', blog_title: post.title, clicked_blog_section: 'Recent Articles' }); }}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
                           </Button>
                         </CardContent>
                       </Card>
@@ -126,7 +126,7 @@ export function BlogPageClient() {
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">Need Roofing Help?</h2>
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto text-white/80">Get expert advice and a free quote from Hamilton&apos;s trusted roofing professionals.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote">Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+            <Button asChild size="lg" variant="cta"><Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/about">Contact Our Experts</Link></Button>
           </div>
         </div>

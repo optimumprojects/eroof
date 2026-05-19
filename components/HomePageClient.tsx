@@ -84,7 +84,7 @@ export function HomePageClient() {
             </div>
             <div className="py-12">
               <Button asChild size="lg" variant="cta">
-                <Link href="/quote">
+                <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>
                   <Calculator className="size-5" />
                   Get A Real Quote In Minutes!
                 </Link>
@@ -120,7 +120,7 @@ export function HomePageClient() {
           <div className="text-center mt-12">
             <p className="font-paragraph text-sm font-semibold text-primary mb-3">Ready to get started?</p>
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="h-5 w-5" />Get A Real Quote In Minutes!</Link>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}><Calculator className="h-5 w-5" />Get A Real Quote In Minutes!</Link>
             </Button>
           </div>
         </div>
@@ -163,7 +163,7 @@ export function HomePageClient() {
           <div className="text-center mt-12">
             <p className="font-paragraph text-sm font-semibold text-primary mb-3">Click Below For Your Instant Quote</p>
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
             </Button>
           </div>
         </div>
@@ -327,7 +327,7 @@ export function HomePageClient() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote"><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}><Calculator className="size-5" />Get A Real Quote In Minutes!</Link>
             </Button>
             <span className="font-paragraph text-white/80">or</span>
             <a href="tel:6478237663" className="flex items-center space-x-2 text-white hover:text-primary-foreground transition-colors">
