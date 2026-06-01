@@ -126,7 +126,7 @@ export function BlogPageClient() {
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">Need Roofing Help?</h2>
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto text-white/80">Get expert advice and a free quote from Hamilton&apos;s trusted roofing professionals.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+            <Button asChild size="lg" variant="cta"><Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim(), site_sub_section: 'blog' }); }}>Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/about">Contact Our Experts</Link></Button>
           </div>
         </div>

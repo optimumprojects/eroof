@@ -633,7 +633,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
                     <h3 className="font-heading text-lg font-bold text-primary line-clamp-2">{p.title}</h3>
                     <p className="font-paragraph text-gray-600 text-sm line-clamp-3">{p.shortDescription}</p>
                     <Button asChild variant="outline" size="sm" className="w-full">
-                      <Link href={`/blog/${p.slug}`}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
+                      <Link href={`/blog/${p.slug}`} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'select_blog', blog_title: p.title, clicked_blog_section: 'Related Articles' }); }}>Read More<ArrowRight className="h-4 w-4 ml-2" /></Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -650,7 +650,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto">Get expert advice and a free quote from Hamilton&apos;s trusted roofing professionals.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="cta">
-              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>Get A Real Quote In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim(), site_sub_section: 'blog' }); }}>Get A Real Quote In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
               <Link href="/services">View Our Services</Link>

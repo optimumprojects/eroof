@@ -22,7 +22,7 @@ export function NavBar() {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
 
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center space-x-3" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: 'Home' }); }}>
             <Image
               src="https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png"
               alt="eRoof.ca - Instant Roofing Quotes Hamilton Burlington"
@@ -35,7 +35,7 @@ export function NavBar() {
 
           <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
+              <Link key={item.name} href={item.href} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header', site_sub_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
                 {item.name}
               </Link>
             ))}
@@ -47,7 +47,7 @@ export function NavBar() {
               <span className="font-paragraph font-semibold">(647) 82-EROOF</span>
             </a>
             <Button asChild variant="cta" size="default">
-              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); }}>
+              <Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header', site_sub_section: 'header' }); }}>
                 <Calculator className="size-4" />
                 Get Instant Quote
               </Link>
@@ -63,7 +63,7 @@ export function NavBar() {
           <div className="lg:hidden py-4 border-t border-white/20">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href} onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
+                <Link key={item.name} href={item.href} onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: item.name }); if (item.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'header', site_sub_section: 'header' }); } }} className="font-paragraph text-sm font-medium text-white hover:text-secondary transition-colors">
                   {item.name}
                 </Link>
               ))}
@@ -77,7 +77,7 @@ export function NavBar() {
                   <span className="font-paragraph font-semibold">info@eroof.ca</span>
                 </a>
                 <Button asChild variant="cta" className="w-full">
-                  <Link href="/quote" onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header' }); }}>
+                  <Link href="/quote" onClick={() => { setIsMenuOpen(false); window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: 'header', site_sub_section: 'header' }); }}>
                     <Calculator className="size-4" />
                     Get Instant Quote
                   </Link>

@@ -32,7 +32,7 @@ export function Footer() {
             <h3 className="font-heading text-lg font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2 font-paragraph text-sm text-white/70">
               {[{label:'Get Instant Quote',href:'/quote'},{label:'Recent Projects',href:'/projects'},{label:'Blog',href:'/blog'},{label:'About Us',href:'/about'},{label:'Services',href:'/services'}].map(l => (
-                <li key={l.label}><Link href={l.href} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'footer_navigation', footer_section: l.label }); if (l.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'footer' }); } }} className="hover:text-secondary transition-colors">{l.label}</Link></li>
+                <li key={l.label}><Link href={l.href} onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'footer_navigation', footer_section: l.label }); if (l.href === '/quote') { window.dataLayer.push({ event: 'cta_quote', site_section: 'footer', site_sub_section: 'footer' }); } }} className="hover:text-secondary transition-colors">{l.label}</Link></li>
               ))}
             </ul>
           </div>

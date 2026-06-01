@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Shield, Clock, CheckCircle, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { QuoteCTA } from '@/components/QuoteCTA'
 
 export const metadata: Metadata = {
   title: 'Roofing Services Hamilton & Burlington | Shingles, Repairs, Gutters',
@@ -43,7 +44,7 @@ export default function ServicesPage() {
           <h1 className="font-heading text-4xl md:text-5xl font-black mb-6">Professional Roofing Services</h1>
           <p className="font-paragraph text-xl mb-8 text-white/80">Transparent pricing and quality workmanship on every project in Hamilton and Burlington.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote">Get A Real Quote Online In Minutes!</Link></Button>
+            <QuoteCTA size="lg" site_sub_section="hero">Get A Real Quote Online In Minutes!</QuoteCTA>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/projects">View Our Work</Link></Button>
           </div>
         </div>
@@ -73,7 +74,7 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <Button asChild variant="cta"><Link href="/quote">Get a Quote<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+                  <QuoteCTA site_sub_section={service.name}>Get a Quote<ArrowRight className="h-4 w-4 ml-2" /></QuoteCTA>
                 </div>
               </div>
             ))}
@@ -144,7 +145,7 @@ export default function ServicesPage() {
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">Ready to Get Started?</h2>
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto text-white/80">Get your instant quote today and join hundreds of satisfied homeowners.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote">Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+            <QuoteCTA size="lg" site_sub_section="Get Started">Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></QuoteCTA>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/projects">View Recent Projects</Link></Button>
           </div>
         </div>

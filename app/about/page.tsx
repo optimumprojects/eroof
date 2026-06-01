@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Shield, Users, Award, MapPin, Phone, Mail, ArrowRight, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
+import { QuoteCTA } from '@/components/QuoteCTA'
 
 export const metadata: Metadata = {
   title: 'About Us | No-Pressure Roofing Hamilton & Burlington',
@@ -39,7 +40,7 @@ export default function AboutPage() {
               <h1 className="font-heading text-4xl md:text-5xl font-black mb-6">Revolutionizing Roofing in The GTA</h1>
               <p className="font-paragraph text-xl mb-8 text-white/80">We&apos;re changing how homeowners buy roofing services — making it as easy as shopping online, with transparent pricing and zero pressure sales.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" variant="cta"><Link href="/quote">Get A Real Quote Online In Minutes!</Link></Button>
+                <QuoteCTA size="lg" site_sub_section="about">Get A Real Quote Online In Minutes!</QuoteCTA>
                 <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/projects">See Our Work</Link></Button>
               </div>
             </div>
@@ -189,7 +190,7 @@ export default function AboutPage() {
             {[
               { icon: Phone, title: 'Call Us', desc: 'Speak with our team directly', cta: <a href="tel:6478237663" className="font-semibold text-black hover:underline">(647) 82-EROOF</a> },
               { icon: Mail, title: 'Email Us', desc: 'Send us your questions', cta: <a href="mailto:info@eroof.ca" className="font-semibold text-black hover:underline">info@eroof.ca</a> },
-              { icon: Shield, title: 'Get a Quote', desc: 'Instant online pricing', cta: <Button asChild variant="cta"><Link href="/quote">Start Here</Link></Button> },
+              { icon: Shield, title: 'Get a Quote', desc: 'Instant online pricing', cta: <QuoteCTA site_sub_section="about">Start Here</QuoteCTA> },
             ].map((item, i) => (
               <div key={i} className="text-center p-8 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
                 <item.icon className="h-12 w-12 text-secondary mx-auto mb-4" />
@@ -208,7 +209,7 @@ export default function AboutPage() {
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">Experience the eRoof.ca Difference</h2>
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto text-white/80">Join hundreds of satisfied homeowners who chose the modern, hassle-free way to get a new roof.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote">Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+            <QuoteCTA size="lg" site_sub_section="about">Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></QuoteCTA>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/projects">See Our Recent Work</Link></Button>
           </div>
           <p className="font-paragraph text-sm text-white/40 mt-6">Transparent pricing · No pressure sales · Professional installation · 10-year warranty</p>

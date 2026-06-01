@@ -155,7 +155,7 @@ export function ProjectsPageClient() {
           <h2 className="font-heading text-3xl md:text-4xl font-black mb-4">Ready to Start Your Project?</h2>
           <p className="font-paragraph text-xl mb-8 max-w-2xl mx-auto text-white/80">Join our growing list of satisfied customers.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="cta"><Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim() }); }}>Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
+            <Button asChild size="lg" variant="cta"><Link href="/quote" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'cta_quote', site_section: document.title.split('|')[0].trim(), site_sub_section: 'projects' }); }}>Get A Real Quote Online In Minutes!<ArrowRight className="h-4 w-4 ml-2" /></Link></Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-black"><Link href="/services">View Our Services</Link></Button>
           </div>
           <p className="font-paragraph text-sm text-white/40 mt-6">Most quotes approved same day · No pressure sales · Up to 50-year warranty</p>
