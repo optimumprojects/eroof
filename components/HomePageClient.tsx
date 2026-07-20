@@ -23,6 +23,12 @@ const staticProjects = [
   { url: '/media/b690e6_a5780f7f975a4315a239e42b4545f307~mv2.jpg', title: 'Oakville Executive Home', location: 'Oakville', description: 'Full roof replacement on an executive home.' },
   { url: '/media/b690e6_2b48f7e8e063463ea36fe750117fd56f~mv2.jpg', title: 'Carlisle Custom Home', location: 'Carlisle', description: 'Custom home roofing installation.' },
   { url: '/media/b690e6_00d7cf02d6434126983adf90c7295bbb~mv2.jpg', title: 'Georgetown Custom Home', location: 'Georgetown', description: 'Custom home roof replacement.' },
+  { url: '/media/project-hamilton-fife-street.jpg', title: 'Fife Street', location: 'Hamilton', description: 'Complete roof replacement.' },
+  { url: '/media/project-kitchener-cranshaw-street.jpg', title: 'Cranshaw Street', location: 'Kitchener', description: 'Complete roof replacement.' },
+  { url: '/media/project-mississauga-lockengate-court.jpg', title: 'Lockengate Court', location: 'Mississauga', description: 'Complete roof replacement.' },
+  { url: '/media/project-mississauga-bansbridge-crescent.jpg', title: 'Bansbridge Crescent', location: 'Mississauga', description: 'Complete roof replacement.' },
+  { url: '/media/project-grimsby-karen-crescent.jpg', title: 'Karen Crescent', location: 'Grimsby', description: 'Complete roof replacement.' },
+  { url: '/media/project-hamilton-houghton-avenue.jpg', title: 'Houghton Avenue', location: 'Hamilton', description: 'Complete roof replacement.' },
 ]
 
 const valueProps = [
@@ -241,9 +247,9 @@ export function HomePageClient() {
               </div>
             </Card>
           </div>
-          <div className="grid grid-cols-3 gap-2 mb-8">
+          <div className="flex gap-2 mb-8 overflow-x-auto pb-2 snap-x">
             {projectImages.map((image, index) => (
-              <button key={index} onClick={() => setCurrentImageIndex(index)} className={`relative aspect-video rounded-lg overflow-hidden transition-all ${index === currentImageIndex ? 'ring-2 ring-action-orange ring-offset-2' : 'hover:opacity-80'}`}>
+              <button key={index} onClick={() => setCurrentImageIndex(index)} className={`relative shrink-0 w-32 md:w-40 aspect-video rounded-lg overflow-hidden snap-start transition-all ${index === currentImageIndex ? 'ring-2 ring-action-orange ring-offset-2' : 'hover:opacity-80'}`}>
                 <Image src={image.url} alt={image.title} fill className="object-cover" />
               </button>
             ))}

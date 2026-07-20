@@ -21,6 +21,24 @@ const projectImages = [
   { url: BASE + 'b690e6_dd6a1fe6747c431da40932accc8cc62a~mv2.jpg', title: 'Townhouse Block', location: 'Burlington' },
   { url: BASE + 'b690e6_bafa7404aa074e9e8f55b0daf292d4c9~mv2.jpg', title: 'Commercial Flat Roof', location: 'Hamilton' },
   { url: BASE + 'b690e6_09fefe8f0b8348df87eb9f3f5b54286a~mv2.jpg', title: 'Commercial Flat Roof — Skylight', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-fife-street.jpg', title: 'Fife Street', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-houghton-avenue.jpg', title: 'Houghton Avenue', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-rockwood-place.jpg', title: 'Rockwood Place', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-diiorio-circle.jpg', title: 'Diiorio Circle', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-capilano-drive.jpg', title: 'Capilano Drive', location: 'Hamilton' },
+  { url: BASE + 'project-hamilton-appleford-road.jpg', title: 'Appleford Road', location: 'Hamilton' },
+  { url: BASE + 'project-kitchener-cranshaw-street.jpg', title: 'Cranshaw Street', location: 'Kitchener' },
+  { url: BASE + 'project-mississauga-lockengate-court.jpg', title: 'Lockengate Court', location: 'Mississauga' },
+  { url: BASE + 'project-mississauga-bansbridge-crescent.jpg', title: 'Bansbridge Crescent', location: 'Mississauga' },
+  { url: BASE + 'project-oakville-kwinter-road.jpg', title: 'Kwinter Road', location: 'Oakville' },
+  { url: BASE + 'project-grimsby-karen-crescent.jpg', title: 'Karen Crescent', location: 'Grimsby' },
+]
+
+const beforeAfters = [
+  { title: 'Cranshaw Street', location: 'Kitchener', before: BASE + 'ba-cranshaw-before.jpg', after: BASE + 'project-kitchener-cranshaw-street.jpg' },
+  { title: 'Bansbridge Crescent', location: 'Mississauga', before: BASE + 'ba-bansbridge-before.jpg', after: BASE + 'project-mississauga-bansbridge-crescent.jpg' },
+  { title: 'Diiorio Circle', location: 'Hamilton', before: BASE + 'ba-diiorio-before.jpg', after: BASE + 'project-hamilton-diiorio-circle.jpg' },
+  { title: 'Fife Street', location: 'Hamilton', before: BASE + 'ba-fife-before.jpg', after: BASE + 'project-hamilton-fife-street.jpg' },
 ]
 
 const stats = [
@@ -125,6 +143,36 @@ export function ProjectsPageClient() {
                 <p className="font-paragraph text-gray-600">Insured and certified installers</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Before & After */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-black text-black mb-4">Before &amp; After</h2>
+            <p className="font-paragraph text-xl text-gray-600 max-w-2xl mx-auto">Real eRoof.ca replacements across the Golden Horseshoe.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {beforeAfters.map((ba, i) => (
+              <Card key={i} className="overflow-hidden">
+                <div className="grid grid-cols-2">
+                  <div className="relative aspect-[4/3]">
+                    <Image src={ba.before} alt={`${ba.title} before`} fill className="object-cover" unoptimized />
+                    <span className="absolute top-3 left-3 bg-black/70 text-white text-xs font-bold px-2 py-1 rounded">BEFORE</span>
+                  </div>
+                  <div className="relative aspect-[4/3]">
+                    <Image src={ba.after} alt={`${ba.title} after`} fill className="object-cover" unoptimized />
+                    <span className="absolute top-3 right-3 bg-action-orange text-black text-xs font-bold px-2 py-1 rounded">AFTER</span>
+                  </div>
+                </div>
+                <CardContent className="p-4 flex items-center justify-between">
+                  <h3 className="font-heading text-lg font-bold text-black">{ba.title}</h3>
+                  <span className="inline-flex items-center font-paragraph text-sm text-gray-600"><MapPin className="h-4 w-4 mr-1" />{ba.location}</span>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
