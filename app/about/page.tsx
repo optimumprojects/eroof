@@ -44,7 +44,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <Image src="https://static.wixstatic.com/media/b690e6_9c0995b03c26486c9377bfdab4f665bf~mv2.png" alt="eRoof.ca team working on a Hamilton home roof replacement" width={600} height={467} className="rounded-lg shadow-2xl w-full" />
+              <Image src="/media/b690e6_9c0995b03c26486c9377bfdab4f665bf~mv2.png" alt="eRoof.ca team working on a Hamilton home roof replacement" width={600} height={467} className="rounded-lg shadow-2xl w-full" />
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
               </Button>
             </div>
             <div>
-              <Image src="https://static.wixstatic.com/media/b690e6_d3e962b4973a43b688fe4dcaa56b701d~mv2.png" alt="eRoof.ca service area map" width={600} height={400} className="rounded-lg shadow-lg w-full" />
+              <Image src="/media/b690e6_d3e962b4973a43b688fe4dcaa56b701d~mv2.png" alt="eRoof.ca service area map" width={600} height={400} className="rounded-lg shadow-lg w-full" />
             </div>
           </div>
         </div>

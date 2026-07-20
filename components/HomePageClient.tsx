@@ -11,18 +11,18 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, Badge } from '@/components/ui/cards'
 
 const services = [
-  { name: 'Asphalt Shingle Replacement', description: 'Most popular, 25-year warranty', image: 'https://static.wixstatic.com/media/b690e6_8e72df8dcf424e89ba147a06d3edf066~mv2.png', href: '/services' },
-  { name: 'Roof Repairs', description: 'Fix leaks fast, same-week service', image: 'https://static.wixstatic.com/media/b690e6_ddf8f0d4048b4cf089fbd26b7928d3cd~mv2.png', href: '/services' },
-  { name: 'Skylights', description: 'Brighten your home naturally', image: 'https://static.wixstatic.com/media/b690e6_1ff4d36a28a9437388df33694f267a48~mv2.png', href: '/services' },
-  { name: 'Ventilation', description: 'Reduce energy costs, prevent damage', image: 'https://static.wixstatic.com/media/b690e6_84e9b825de5e4edb9874eb41a5afb24e~mv2.png', href: '/services' },
-  { name: 'Soffits & Fascia', description: 'Complete exterior trim protection', image: 'https://static.wixstatic.com/media/b690e6_e8e46bc011f3446ea983fd0100ae7f8f~mv2.png', href: '/services' },
-  { name: 'Gutters', description: 'Complete water management solutions', image: 'https://static.wixstatic.com/media/b690e6_e92e86b7227040c78a518badbfcb6d67~mv2.png', href: '/services' },
+  { name: 'Asphalt Shingle Replacement', description: 'Most popular, 25-year warranty', image: '/media/b690e6_8e72df8dcf424e89ba147a06d3edf066~mv2.png', href: '/services' },
+  { name: 'Roof Repairs', description: 'Fix leaks fast, same-week service', image: '/media/b690e6_ddf8f0d4048b4cf089fbd26b7928d3cd~mv2.png', href: '/services' },
+  { name: 'Skylights', description: 'Brighten your home naturally', image: '/media/b690e6_1ff4d36a28a9437388df33694f267a48~mv2.png', href: '/services' },
+  { name: 'Ventilation', description: 'Reduce energy costs, prevent damage', image: '/media/b690e6_84e9b825de5e4edb9874eb41a5afb24e~mv2.png', href: '/services' },
+  { name: 'Soffits & Fascia', description: 'Complete exterior trim protection', image: '/media/b690e6_e8e46bc011f3446ea983fd0100ae7f8f~mv2.png', href: '/services' },
+  { name: 'Gutters', description: 'Complete water management solutions', image: '/media/b690e6_e92e86b7227040c78a518badbfcb6d67~mv2.png', href: '/services' },
 ]
 
 const staticProjects = [
-  { url: 'https://static.wixstatic.com/media/b690e6_a5780f7f975a4315a239e42b4545f307~mv2.jpg', title: 'Oakville Executive Home', location: 'Oakville', description: 'Full roof replacement on an executive home.' },
-  { url: 'https://static.wixstatic.com/media/b690e6_2b48f7e8e063463ea36fe750117fd56f~mv2.jpg', title: 'Carlisle Custom Home', location: 'Carlisle', description: 'Custom home roofing installation.' },
-  { url: 'https://static.wixstatic.com/media/b690e6_00d7cf02d6434126983adf90c7295bbb~mv2.jpg', title: 'Georgetown Custom Home', location: 'Georgetown', description: 'Custom home roof replacement.' },
+  { url: '/media/b690e6_a5780f7f975a4315a239e42b4545f307~mv2.jpg', title: 'Oakville Executive Home', location: 'Oakville', description: 'Full roof replacement on an executive home.' },
+  { url: '/media/b690e6_2b48f7e8e063463ea36fe750117fd56f~mv2.jpg', title: 'Carlisle Custom Home', location: 'Carlisle', description: 'Custom home roofing installation.' },
+  { url: '/media/b690e6_00d7cf02d6434126983adf90c7295bbb~mv2.jpg', title: 'Georgetown Custom Home', location: 'Georgetown', description: 'Custom home roof replacement.' },
 ]
 
 const valueProps = [
@@ -307,7 +307,7 @@ export function HomePageClient() {
             </div>
             <div className="relative">
               <Image
-                src="https://static.wixstatic.com/media/b690e6_d3e962b4973a43b688fe4dcaa56b701d~mv2.png"
+                src="/media/b690e6_d3e962b4973a43b688fe4dcaa56b701d~mv2.png"
                 alt="eRoof.ca service area map — Hamilton, Burlington and surrounding GTA communities"
                 width={600}
                 height={400}

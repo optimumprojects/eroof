@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   description: "Get an instant roof quote online in minutes — no sales visit, no pressure, no surprises. Hamilton and Burlington's modern roofing company. CertainTeed certified. Call (647) 82-EROOF.",
   openGraph: {
     siteName: 'eRoof.ca',
-    images: ['https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png'],
+    images: ['/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png'],
   },
   icons: {
-    icon: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
-    shortcut: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
-    apple: 'https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+    icon: '/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+    shortcut: '/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
+    apple: '/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png',
   },
 }
 

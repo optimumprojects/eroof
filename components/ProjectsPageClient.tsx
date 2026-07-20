@@ -6,7 +6,7 @@ import { MapPin, Clock, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-rea
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
 
-const BASE = 'https://static.wixstatic.com/media/'
+const BASE = '/media/'
 
 const projectImages = [
   { url: BASE + 'b690e6_a5780f7f975a4315a239e42b4545f307~mv2.jpg', title: 'Oakville Executive Home', location: 'Oakville' },

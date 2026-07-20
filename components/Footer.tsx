@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Image src="https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png" alt="eRoof.ca" width={120} height={40} className="h-10 w-auto" />
+            <Image src="/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png" alt="eRoof.ca" width={120} height={40} className="h-10 w-auto" />
             <p className="font-paragraph text-sm text-white/70">Hamilton and Burlington&apos;s modern roofing company. Instant quotes, no pressure sales, professional installation.</p>
             <a href="tel:6478237663" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_phone', clicked_phone: '(647) 82-EROOF', site_section: 'footer' }); }} className="flex items-center space-x-2 hover:text-white transition-colors"><Phone className="h-4 w-4" /><span className="font-paragraph font-semibold">(647) 82-EROOF</span></a>
             <a href="mailto:info@eroof.ca" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_email', clicked_email: 'info@eroof.ca', site_section: 'footer' }); }} className="flex items-center space-x-2 hover:text-white transition-colors"><Mail className="h-4 w-4" /><span className="font-paragraph font-semibold">info@eroof.ca</span></a>

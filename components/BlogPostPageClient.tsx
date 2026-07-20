@@ -78,7 +78,7 @@ The most common complaint homeowners have is getting a final bill that doesn't m
 ## The eRoof.ca Approach
 
 At eRoof.ca, our all-in pricing covers tear-off, disposal, underlayment, drip edge, flashing, and full cleanup. No surprise line items. Get your instant online quote today and see why hundreds of Ontario homeowners are choosing the modern way to buy a roof.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_fcb32723586d4acb80b3b087986a621f~mv2.png',
+    featuredImage: '/media/b690e6_fcb32723586d4acb80b3b087986a621f~mv2.png',
     publishDate: '2026-03-01',
   },
   {
@@ -113,7 +113,7 @@ The risk with subcontractors comes when there's no quality control. Some compani
 We use vetted sub-crews who follow one clear playbook. Every job gets the same materials, same cleanup protocol, and same finish standard. A salaried project manager oversees every installation — not to sell you anything, but to ensure the work meets our specs.
 
 The result is the quality of an in-house operation at a price that reflects the efficiency of the subcontractor model.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_91e05c774d534b228516728807796ee5~mv2.png',
+    featuredImage: '/media/b690e6_91e05c774d534b228516728807796ee5~mv2.png',
     publishDate: '2026-02-15',
   },
   {
@@ -154,7 +154,7 @@ Before signing any contract, make sure you understand what's included:
 - Is new drip edge included?
 
 At eRoof.ca, all of these components are included in our standard installation. No surprises, no add-ons mid-project.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_cb7e81395d3f482495d301ce0afc0446~mv2.jpg',
+    featuredImage: '/media/b690e6_cb7e81395d3f482495d301ce0afc0446~mv2.jpg',
     publishDate: '2026-01-28',
   },
   {
@@ -192,7 +192,7 @@ If any of these items are listed as "additional" or "TBD," you're likely to see 
 ## The eRoof.ca Approach
 
 Our instant online estimator gives you a real ballpark in minutes using satellite imagery and local pricing data. When a project manager visits, it's to verify scope — not to pressure you into signing. The price you see is the price you pay.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_cacebfd7006640f79e29eedf729c0d49~mv2.jpeg',
+    featuredImage: '/media/b690e6_cacebfd7006640f79e29eedf729c0d49~mv2.jpeg',
     publishDate: '2026-01-20',
   },
   {
@@ -230,7 +230,7 @@ Our process is built around transparency, not transactions:
 - **Follow up on your terms** — we don't chase you with calls
 
 The result is a better price and a dramatically less stressful experience. You stay in control from start to finish.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_eac614728c4147dba14150e8cd4bb7b3~mv2.png',
+    featuredImage: '/media/b690e6_eac614728c4147dba14150e8cd4bb7b3~mv2.png',
     publishDate: '2026-01-10',
   },
   {
@@ -268,7 +268,7 @@ If you'd like to proceed, a certified project manager visits your property for a
 Once you approve the final quote, you pick your preferred installation date. Our vetted crews handle everything from tear-off to final cleanup — typically completed in one to two days.
 
 No callbacks to wait for, no salesperson in your kitchen, and no surprises on your invoice. That's roofing, modernized.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_00f7d888a41d4c4abf3a7884bcf8aacc~mv2.png',
+    featuredImage: '/media/b690e6_00f7d888a41d4c4abf3a7884bcf8aacc~mv2.png',
     publishDate: '2025-12-20',
   },
   {
@@ -298,7 +298,7 @@ We work with vetted sub-crews who follow one clear playbook:
 ## The Math Is Simple
 
 No showroom. No commission sales force. No aggressive follow-up call centre. Those costs get passed back to you as a better price and a less stressful experience. That's the eRoof.ca difference.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_f6b850c1f8174610a3a7e8da0139af39~mv2.png',
+    featuredImage: '/media/b690e6_f6b850c1f8174610a3a7e8da0139af39~mv2.png',
     publishDate: '2025-12-01',
   },
   {
@@ -337,7 +337,7 @@ When evaluating quotes, make sure each one includes the same scope:
 - Workmanship warranty details
 
 At eRoof.ca, our quotes are all-inclusive by default. No line-item surprises, no hidden fees.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_831032ed490041d587ff90bdecef28cf~mv2.png',
+    featuredImage: '/media/b690e6_831032ed490041d587ff90bdecef28cf~mv2.png',
     publishDate: '2025-11-15',
   },
   {
@@ -369,7 +369,7 @@ For a typical 1,500–2,000 sq ft Hamilton home, an asphalt shingle replacement 
 - Full cleanup
 
 The big traditional companies in Hamilton typically quote the same job at $15,000–$22,000. The difference isn't the materials or the craftsmanship — it's the overhead model.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_fcb32723586d4acb80b3b087986a621f~mv2.png',
+    featuredImage: '/media/b690e6_fcb32723586d4acb80b3b087986a621f~mv2.png',
     publishDate: '2025-01-14',
   },
   {
@@ -405,7 +405,7 @@ Most asphalt shingle roofs last 20–25 years. If your roof is approaching that 
 ## What to Do Next
 
 If you've spotted any of these warning signs, get a professional assessment. At eRoof.ca, you can start with a free instant online estimate to understand your options and costs before committing to anything.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_7f82b4802d2a4a7da4b026927874e923~mv2.png',
+    featuredImage: '/media/b690e6_7f82b4802d2a4a7da4b026927874e923~mv2.png',
     publishDate: '2024-11-01',
   },
   {
@@ -449,7 +449,7 @@ The trim around your roofline protects against water damage and pests. We offer:
 - Gutter guard systems to prevent clogs
 
 Every service follows the same eRoof.ca standard — transparent pricing, professional installation, and no pressure. Visit our services page or get an instant quote to learn more.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_3a0261d2944342af84c619664c950d1d~mv2.png',
+    featuredImage: '/media/b690e6_3a0261d2944342af84c619664c950d1d~mv2.png',
     publishDate: '2024-10-15',
   },
   {
@@ -498,7 +498,7 @@ During winter, focus on monitoring:
 ## When Maintenance Isn't Enough
 
 If your seasonal inspections consistently reveal new problems, your roof may be approaching the end of its life. Start planning your replacement early to avoid emergency situations. Get an instant estimate at eRoof.ca to understand your options.`,
-    featuredImage: 'https://static.wixstatic.com/media/b690e6_b832f176e4444e419210a46d6321eb80~mv2.png',
+    featuredImage: '/media/b690e6_b832f176e4444e419210a46d6321eb80~mv2.png',
     publishDate: '2024-09-20',
   },
 ]
@@ -623,7 +623,7 @@ export function BlogPostPageClient({ slug }: { slug: string }) {
               {related.map(p => (
                 <Card key={p._id} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative aspect-video overflow-hidden">
-                    <Image src={p.featuredImage || 'https://static.wixstatic.com/media/b690e6_93c3af64687a494dba7d06e6bcdf5c8a~mv2.png'} alt={p.title} fill className="object-cover" />
+                    <Image src={p.featuredImage || '/media/b690e6_93c3af64687a494dba7d06e6bcdf5c8a~mv2.png'} alt={p.title} fill className="object-cover" />
                   </div>
                   <CardContent className="p-6 space-y-4">
                     <div className="flex items-center space-x-4 text-sm text-gray-500">

@@ -24,7 +24,7 @@ export function NavBar() {
 
           <Link href="/" className="flex items-center space-x-3" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'header_navigation', header_section: 'Home' }); }}>
             <Image
-              src="https://static.wixstatic.com/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png"
+              src="/media/b690e6_463649724ea14c39b1b440d4fd4a5282~mv2.png"
               alt="eRoof.ca - Instant Roofing Quotes Hamilton Burlington"
               width={180}
               height={56}

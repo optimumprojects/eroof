@@ -14,3 +14,4 @@ out/
 .env*.local
 .netlify/
 tsconfig.tsbuildinfo
+.dewix-work/
