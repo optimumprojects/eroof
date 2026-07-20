@@ -12,3 +12,5 @@ out/
 # env
 .env
 .env*.local
+.netlify/
+tsconfig.tsbuildinfo

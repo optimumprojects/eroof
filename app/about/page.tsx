@@ -15,17 +15,16 @@ export const metadata: Metadata = {
 const values = [
   { icon: Shield, title: 'Transparency', description: 'No hidden fees, no surprise costs. You know exactly what you\'re paying for before we start.' },
   { icon: Users, title: 'No Pressure', description: 'Our quotes speak for themselves. No high-pressure sales tactics or pushy follow-ups.' },
-  { icon: Award, title: 'Quality First', description: 'Licensed, insured, and certified installers using premium materials with comprehensive warranties.' },
+  { icon: Award, title: 'Quality First', description: 'Insured and certified installers using premium materials with comprehensive warranties.' },
   { icon: MapPin, title: 'Local Commitment', description: 'Hamilton-based and Hamilton-focused. We\'re your neighbours, not a faceless corporation.' },
 ]
 const certifications = [
   { name: 'CertainTeed ShingleMaster Accredited', description: 'Master Craftsman Installer' },
-  { name: 'IKO ROOFPRO Advantage Installers', description: 'Professional certification program' },
   { name: 'WSIB Coverage', description: 'Full workplace safety insurance' },
-  { name: 'Licensed & Certified', description: 'Fully licensed roofing contractor' },
+  { name: 'Certified & Insured', description: 'Fully insured with certified craftsmanship' },
 ]
 const promises = ['Instant, accurate online quotes','No high-pressure sales tactics','Transparent, upfront pricing','Professional, timely installation','Complete cleanup and debris removal','10-year workmanship warranty']
-const donts = ['Door-to-door sales visits','High-pressure follow-up calls','Hidden fees or surprise costs','Subcontract to unlicensed workers','Leave messes behind','Disappear after installation']
+const donts = ['Door-to-door sales visits','High-pressure follow-up calls','Hidden fees or surprise costs','Subcontract to unvetted crews','Leave messes behind','Disappear after installation']
 const serviceAreas = ['Oakville','Mississauga','Milton','Grimsby','Burlington','St. Catharines','Hamilton','Brantford']
 
 
@@ -87,14 +86,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Licensed - DARK bg */}
+      {/* Credentials - DARK bg */}
       <section className="py-20 bg-dark-card">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-4">Licensed & Certified</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-4">Certified & Insured</h2>
             <p className="font-paragraph text-xl text-white/70 max-w-2xl mx-auto">We maintain the highest industry standards and partner with leading manufacturers.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {certifications.map((cert, i) => (
               <div key={i} className="bg-white/10 rounded-lg p-6 border border-white/20">
                 <div className="flex items-start space-x-3">

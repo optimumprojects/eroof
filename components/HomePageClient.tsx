@@ -252,7 +252,7 @@ export function HomePageClient() {
             {[
               { icon: Clock, title: 'Fast Installation', desc: 'Most projects completed in 1-3 days', color: 'text-action-orange' },
               { icon: MapPin, title: 'Local Expertise', desc: 'Serving Hamilton, Burlington and surrounding areas', color: 'text-trust-green' },
-              { icon: Star, title: 'Quality Guaranteed', desc: 'Licensed, insured, and certified installers', color: 'text-secondary' },
+              { icon: Star, title: 'Quality Guaranteed', desc: 'Insured and certified installers', color: 'text-secondary' },
             ].map((stat, i) => (
               <Card key={i}>
                 <CardContent className="p-6 text-center">

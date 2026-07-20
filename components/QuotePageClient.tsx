@@ -67,7 +67,7 @@ export function QuotePageClient() {
             {[
               { icon: Calculator, title: 'Instant Estimates', desc: 'Get accurate pricing in minutes, not days' },
               { icon: Shield, title: 'No Pressure Sales', desc: 'Our quotes speak for themselves' },
-              { icon: CheckCircle, title: 'Licensed & Insured', desc: 'Fully certified Hamilton roofers' },
+              { icon: CheckCircle, title: 'Insured & Certified', desc: 'Fully certified Hamilton roofers' },
             ].map((item, i) => (
               <div key={i} className="text-center p-6 bg-white/10 rounded-lg">
                 <item.icon className="h-12 w-12 text-secondary mx-auto mb-4" />

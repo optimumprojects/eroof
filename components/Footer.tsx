@@ -38,7 +38,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="font-paragraph text-sm text-white/40">© 2026 eRoof.ca — Serving since 2020. All rights reserved.</p>
+          <p className="font-paragraph text-sm text-white/40">© 2026 eRoof.ca — Serving since 2025. All rights reserved.</p>
         </div>
       </div>
     </footer>

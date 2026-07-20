@@ -122,7 +122,7 @@ export function ProjectsPageClient() {
                   <span className="text-black text-lg font-black">5★</span>
                 </div>
                 <h3 className="font-heading text-lg font-bold mb-2 text-black">Quality Guaranteed</h3>
-                <p className="font-paragraph text-gray-600">Licensed, insured, and certified installers</p>
+                <p className="font-paragraph text-gray-600">Insured and certified installers</p>
               </CardContent>
             </Card>
           </div>

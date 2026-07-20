@@ -22,7 +22,7 @@ const services = [
 
 const benefits = [
   { icon: Star, title: 'Transparent Pricing', description: "No hidden fees or surprise costs. You know exactly what you're paying for." },
-  { icon: Shield, title: 'Quality Guarantee', description: 'Licensed, insured, and certified installers with comprehensive warranties.' },
+  { icon: Shield, title: 'Quality Guarantee', description: 'Insured and certified installers with comprehensive warranties.' },
   { icon: Clock, title: 'Fast Installation', description: 'Most projects completed in one day with minimal disruption.' },
   { icon: CheckCircle, title: 'Local Expertise', description: 'Hamilton-based team that understands local weather and building requirements.' },
 ]
