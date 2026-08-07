@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, Badge } from '@/components/ui/cards'
+import { BBBSeal } from '@/components/BBBSeal'
 
 const services = [
   { name: 'Asphalt Shingle Replacement', description: 'Most popular, 25-year warranty', image: '/media/b690e6_8e72df8dcf424e89ba147a06d3edf066~mv2.png', href: '/services' },
@@ -104,7 +105,10 @@ export function HomePageClient() {
               <Badge><CheckCircle className="size-4 mr-2 stroke-secondary shrink-0" /><span>Certified Installers</span></Badge>
               <Badge><Shield className="size-4 mr-2 stroke-secondary shrink-0" /><span>Up to 50-Year Warranties</span></Badge>
             </div>
-            <GoogleReviewsBadge />
+            <div className="flex flex-row items-center justify-center gap-5 sm:gap-6 flex-wrap">
+              <GoogleReviewsBadge />
+              <BBBSeal height={56} />
+            </div>
           </div>
         </div>
       </section>

@@ -5,6 +5,7 @@ import { Shield, Users, Award, MapPin, Phone, Mail, ArrowRight, CheckCircle } fr
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
 import { QuoteCTA } from '@/components/QuoteCTA'
+import { BBBSeal } from '@/components/BBBSeal'
 
 export const metadata: Metadata = {
   title: 'About Us | No-Pressure Roofing Hamilton & Burlington',
@@ -93,6 +94,7 @@ export default function AboutPage() {
             <h2 className="font-heading text-3xl md:text-4xl font-black text-white mb-4">Certified & Insured</h2>
             <p className="font-paragraph text-xl text-white/70 max-w-2xl mx-auto">We maintain the highest industry standards and partner with leading manufacturers.</p>
           </div>
+          <div className="flex justify-center mb-10"><BBBSeal height={116} /></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {certifications.map((cert, i) => (
               <div key={i} className="bg-white/10 rounded-lg p-6 border border-white/20">

@@ -4,6 +4,7 @@ import { Calculator, Shield, CheckCircle, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/cards'
 import { GoogleReviewsBadge } from '@/components/GoogleReviewsBadge'
+import { BBBSeal } from '@/components/BBBSeal'
 
 export function QuotePageClient() {
   const [iframeError] = useState(false)
@@ -76,6 +77,8 @@ export function QuotePageClient() {
               </div>
             ))}
           </div>
+
+          <div className="flex justify-center mb-16"><BBBSeal height={92} /></div>
 
           {/* Privacy Policy */}
           <div className="border-t border-white/20 pt-12">

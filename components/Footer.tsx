@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
+import { BBBSeal } from '@/components/BBBSeal'
 
 export function Footer() {
   return (
@@ -13,6 +14,7 @@ export function Footer() {
             <p className="font-paragraph text-sm text-white/70">Hamilton and Burlington&apos;s modern roofing company. Instant quotes, no pressure sales, professional installation.</p>
             <a href="tel:6478237663" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_phone', clicked_phone: '(647) 82-EROOF', site_section: 'footer' }); }} className="flex items-center space-x-2 hover:text-white transition-colors"><Phone className="h-4 w-4" /><span className="font-paragraph font-semibold">(647) 82-EROOF</span></a>
             <a href="mailto:info@eroof.ca" onClick={() => { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: 'click_email', clicked_email: 'info@eroof.ca', site_section: 'footer' }); }} className="flex items-center space-x-2 hover:text-white transition-colors"><Mail className="h-4 w-4" /><span className="font-paragraph font-semibold">info@eroof.ca</span></a>
+            <BBBSeal height={72} className="inline-block pt-1" />
           </div>
           <div>
             <h3 className="font-heading text-lg font-semibold mb-4 text-white">Services</h3>
