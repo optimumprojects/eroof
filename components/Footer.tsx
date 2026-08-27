@@ -39,8 +39,15 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="font-paragraph text-sm text-white/40">© 2026 eRoof.ca — Serving since 2025. All rights reserved.</p>
+        <div className="border-t border-white/20 mt-8 pt-8 text-center space-y-3">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-paragraph text-sm text-white/60">
+            <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-secondary transition-colors">Terms of Service</Link>
+            <Link href="/terms#sms-terms" className="hover:text-secondary transition-colors">SMS Terms</Link>
+            <Link href="/book" className="hover:text-secondary transition-colors">Book a Visit</Link>
+          </div>
+          <p className="font-paragraph text-sm text-white/40">© 2026 eRoof.ca (eRoof Inc.) — Serving since 2025. All rights reserved.</p>
+          <p className="font-paragraph text-xs text-white/30">21 King St W, Hamilton, ON L8P 4W7 · No mobile information is sold or shared with third parties for marketing.</p>
         </div>
       </div>
     </footer>

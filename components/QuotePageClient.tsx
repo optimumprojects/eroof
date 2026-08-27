@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { Calculator, Shield, CheckCircle, Phone, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -57,7 +58,11 @@ export function QuotePageClient() {
               <iframe src={iframeSrc} width="100%" height="600" style={{ border: 0, display: 'block' }} title="Roofr Instant Estimator — eRoof.ca Hamilton Burlington" />
               <div className="bg-white px-6 py-4 border-t border-gray-100">
                 <p className="text-sm text-gray-600 text-center max-w-2xl mx-auto">
-                  <strong>By submitting your address or quote request, you agree to receive text messages from eRoof.ca. Message and data rates may apply. Reply STOP to unsubscribe at any time.</strong>
+                  <strong>eRoof.ca may send you text messages about the estimate you requested</strong> — confirmation, appointment scheduling and reminders, and follow-up about your own project.
+                  Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time, HELP for help.
+                  Text messages are optional and are never a condition of purchase.{' '}
+                  <Link href="/book" className="underline font-semibold text-black">Prefer to opt in explicitly? Book your visit here.</Link>{' '}
+                  See our <Link href="/privacy" className="underline">Privacy Policy</Link> and <Link href="/terms#sms-terms" className="underline">SMS Terms</Link>.
                 </p>
               </div>
             </div>
@@ -80,33 +85,25 @@ export function QuotePageClient() {
 
           <div className="flex justify-center mb-16"><BBBSeal height={92} /></div>
 
-          {/* Privacy Policy */}
+          {/* Legal — full policies live at their own URLs */}
           <div className="border-t border-white/20 pt-12">
-            <div className="space-y-6 text-white/70">
-              <div>
-                <h2 className="font-heading text-2xl font-black text-white mb-1">eRoof.ca Privacy Policy</h2>
-                <p className="text-sm text-white/40">Last updated: January 30, 2026</p>
+            <div className="space-y-4 text-white/70">
+              <h2 className="font-heading text-2xl font-black text-white">Your privacy and our SMS program</h2>
+              <p className="font-paragraph">
+                eRoof.ca (eRoof Inc.) only sends text messages about an estimate or visit you asked us for. Message frequency varies.
+                Message and data rates may apply. Reply STOP to opt out at any time, HELP for help. Text messages are optional and never a condition of purchase.
+                No mobile information is sold, rented, or shared with third parties or affiliates for marketing purposes.
+              </p>
+              <p className="font-paragraph">
+                Read the full <Link href="/privacy" className="text-secondary hover:underline font-semibold">Privacy Policy</Link> and{' '}
+                <Link href="/terms#sms-terms" className="text-secondary hover:underline font-semibold">SMS Terms</Link>.
+              </p>
+              <div className="pt-2 space-y-1 text-sm">
+                <p><strong className="text-white">eRoof.ca</strong> (eRoof Inc.)</p>
+                <p>21 King St W, Hamilton, ON L8P 4W7</p>
+                <p>Phone: <a href="tel:6478237663" className="text-secondary hover:underline">647-823-7663</a></p>
+                <p>Email: <a href="mailto:info@eroof.ca" className="text-secondary hover:underline">info@eroof.ca</a></p>
               </div>
-              {[
-                { title: '1. Who We Are', body: 'This Privacy Policy explains how eRoof.ca ("eRoof," "we," "us," "our") collects, uses, and protects your personal information when you visit eroof.ca, use our online estimator, request an inspection, or communicate with us. By using our website or services, you agree to this Privacy Policy.' },
-                { title: '2. Information We Collect', body: 'We collect information you provide directly, such as your name, email address, phone number, home address, and project details when you request a quote or schedule an inspection. We also collect usage data automatically, including IP address, browser type, and pages visited, to improve our website and services.' },
-                { title: '3. How We Use Your Information', body: 'We use your personal information to provide and improve our services, including generating roof estimates, scheduling inspections, communicating about your project, and sending relevant updates. We may also use your information for internal analytics to improve our website experience.' },
-                { title: '4. SMS Communications', body: 'By providing your phone number and opting in, you consent to receive SMS messages from eRoof about your estimate, inspection, scheduling, or project. Reply STOP to opt out at any time. Message and data rates may apply. We do not sell your phone number or share mobile information with third parties for marketing.' },
-                { title: '5. Sharing and Disclosure', body: 'We may share your information with trusted service providers only as needed to operate our business. We do not sell or rent your personal information to third parties.' },
-                { title: '6. Contact Us', body: '' },
-              ].map((s, i) => (
-                <div key={i}>
-                  <h3 className="font-heading text-lg font-bold text-white mb-2">{s.title}</h3>
-                  {s.body ? <p className="font-paragraph">{s.body}</p> : (
-                    <div className="space-y-1">
-                      <p><strong className="text-white">eRoof.ca</strong> (eRoof Inc.)</p>
-                      <p>21 King St W, Hamilton, ON L8P 4W7</p>
-                      <p>Phone: <a href="tel:6478237663" className="text-secondary hover:underline">647-823-7663</a></p>
-                      <p>Email: <a href="mailto:info@eroof.ca" className="text-secondary hover:underline">info@eroof.ca</a></p>
-                    </div>
-                  )}
-                </div>
-              ))}
             </div>
           </div>
         </div>
