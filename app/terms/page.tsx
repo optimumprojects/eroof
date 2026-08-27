@@ -33,9 +33,15 @@ export default function TermsPage() {
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6" id="sms-terms">
             <h2 className="font-heading text-2xl font-black text-black mb-4">3. SMS Messaging Terms</h2>
             <div className="space-y-4 font-paragraph text-gray-700 leading-relaxed">
-              <p><strong>Program description.</strong> eRoof.ca operates a customer care text messaging program. If you give express consent, we send text messages about the roof estimate or visit you requested from us. This includes confirmation of your request, appointment scheduling and reminders for your Roof Verification &amp; Education Visit, and follow-up about your own project. We do not send promotional or marketing text messages, and we never message purchased, rented, or third-party lists.</p>
+              <p><strong>Program description.</strong> eRoof.ca operates a <strong>customer care</strong> text messaging program. If you give express consent, we send text messages about the roof estimate or visit you requested from us. This includes confirmation of your request, appointment scheduling and reminders for your Roof Verification &amp; Education Visit, and follow-up about your own project. We never message purchased, rented, or third-party lists.</p>
 
-              <p><strong>How you opt in.</strong> You opt in by ticking the SMS consent checkbox on a form on this website. The checkbox is not ticked by default and is entirely optional. <strong>Consent to receive text messages is not a condition of any purchase or service</strong> — you can request and receive your estimate, and book a visit, without opting in to text messages.</p>
+              <p><strong>Two separate, independent consents.</strong> We ask for customer care messages and promotional messages separately, and never bundle them. Ticking one does not tick the other, and you may accept either, both, or neither:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Customer care messages</strong> — about the estimate, appointment or project you asked us about. This is the program we currently operate.</li>
+                <li><strong>Promotional messages (optional)</strong> — occasional seasonal roofing tips and offers. Sent only to people who tick that separate checkbox, and never to anyone who did not.</li>
+              </ul>
+
+              <p><strong>How you opt in.</strong> You opt in by ticking the relevant consent checkbox on a form on this website. Neither checkbox is ticked by default and both are entirely optional. <strong>Consent to receive text messages is not a condition of any purchase or service</strong> — you can request and receive your estimate, and book a visit, without opting in to any text messages.</p>
 
               <p><strong>Message frequency.</strong> Message frequency varies based on your project and the stage it is at. You can expect roughly 2 to 8 messages per month while your estimate or project is active.</p>
 

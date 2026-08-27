@@ -5,9 +5,20 @@ import { CheckCircle, AlertCircle } from 'lucide-react'
 
 type Status = 'idle' | 'sending' | 'done' | 'error'
 
+// GHL inbound webhook (eRoof sub-account). Public by design — this is a NEXT_PUBLIC value either way.
+const WEBHOOK =
+  process.env.NEXT_PUBLIC_GHL_INBOUND_WEBHOOK ||
+  'https://services.leadconnectorhq.com/hooks/bW7LdzUa5JS7s6PszwPd/webhook-trigger/71ba0bef-3f91-4ba7-86ff-1eaffbab9109'
+
+const SMS_CONSENT_TEXT =
+  'I agree to receive text messages from eRoof.ca about my estimate and appointment. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help.'
+const MARKETING_CONSENT_TEXT =
+  'I would also like to receive occasional seasonal roofing tips and offers from eRoof.ca by text.'
+
 export function BookVisitForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [smsConsent, setSmsConsent] = useState(false) // unchecked by default — A2P requirement
+  const [marketingConsent, setMarketingConsent] = useState(false) // separate + unchecked — unbundled consent (A2P 30913)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -23,23 +34,22 @@ export function BookVisitForm() {
       postal_code: fd.get('postal_code'),
       project_details: fd.get('project_details'),
       sms_consent: smsConsent,
-      sms_consent_text: smsConsent
-        ? 'I agree to receive text messages from eRoof.ca about my estimate and appointment. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help.'
-        : '',
+      sms_consent_text: smsConsent ? SMS_CONSENT_TEXT : '',
       sms_consent_at: smsConsent ? new Date().toISOString() : '',
+      marketing_consent: marketingConsent,
+      marketing_consent_text: marketingConsent ? MARKETING_CONSENT_TEXT : '',
+      marketing_consent_at: marketingConsent ? new Date().toISOString() : '',
       source: 'eroof.ca/book',
     }
     try {
-      const endpoint = process.env.NEXT_PUBLIC_GHL_INBOUND_WEBHOOK
-      if (!endpoint) throw new Error('missing endpoint')
-      const res = await fetch(endpoint, {
+      const res = await fetch(WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
       if (!res.ok) throw new Error('bad response')
       window.dataLayer = window.dataLayer || []
-      window.dataLayer.push({ event: 'book_visit_submit', sms_consent: smsConsent })
+      window.dataLayer.push({ event: 'book_visit_submit', sms_consent: smsConsent, marketing_consent: marketingConsent })
       setStatus('done')
     } catch {
       setStatus('error')
@@ -124,6 +134,24 @@ export function BookVisitForm() {
           This box is optional and unchecked by default. Consent to receive text messages is not a condition of any purchase.
           You can submit this form and get your estimate without agreeing to text messages.
         </p>
+
+        {/* Separate, independent consent for promotional messages — never bundled with the above (A2P 30913) */}
+        <div className="mt-5 pt-5 border-t border-gray-300">
+          <div className="flex items-start gap-3">
+            <input
+              id="marketing_consent"
+              name="marketing_consent"
+              type="checkbox"
+              checked={marketingConsent}
+              onChange={e => setMarketingConsent(e.target.checked)}
+              className="mt-1 h-5 w-5 shrink-0 accent-black cursor-pointer"
+            />
+            <label htmlFor="marketing_consent" className="font-paragraph text-sm text-gray-800 cursor-pointer">
+              <span className="font-semibold text-black">Optional:</span> I&apos;d also like occasional seasonal roofing tips and offers by text.
+              Separate from the above — you can say yes to one and no to the other. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help.
+            </label>
+          </div>
+        </div>
       </div>
 
       {status === 'error' && (
