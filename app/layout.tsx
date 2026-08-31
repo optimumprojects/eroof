@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Poppins } from 'next/font/google'
 import './globals.css'
 import { NavBar } from '@/components/NavBar'
@@ -56,6 +57,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <NavBar />
         <main>{children}</main>
         <Footer />
+        {/* GHL / LeadConnector chat widget — the registered A2P opt-in surface */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a95984f1f6b2656cfd77465"
+          data-source="WEB_USER"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
